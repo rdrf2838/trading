@@ -1,0 +1,4 @@
+## Poetry
+```
+poetry new trading
+```
