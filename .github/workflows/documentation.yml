@@ -1,0 +1,35 @@
+name: documentation
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Install poetry
+      run: |
+        python3 -m pip install --user pipx
+        python3 -m pipx ensurepath
+        pipx install poetry
+    - name: Install dependencies
+      run: |
+        poetry install --with docs
+    - name: Sphinx build
+      run: |
+        sphinx-build docs _build
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/
+          force_orphan: true

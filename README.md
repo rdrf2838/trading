@@ -4,7 +4,10 @@
 poetry new trading
 poetry lock
 poetry install
+poetry sync (also removes packages!)
 poetry run which python
+
+
 ```
 ## Sphinx
 ```
@@ -31,5 +34,7 @@ poetry install
 
 # TODO
 - build and upload to python package manager
-- create documentation
+- create documentation on github
 - dev dependencies
+- remove conda entirely
+- github actions shared...
