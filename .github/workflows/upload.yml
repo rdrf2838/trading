@@ -1,4 +1,4 @@
-name: Upload
+name: upload
 
 on:
     workflow_run:
