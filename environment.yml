@@ -1,0 +1,6 @@
+name: trading3.12
+channels:
+  - conda-forge
+dependencies:
+  - pandas
+  - polars
