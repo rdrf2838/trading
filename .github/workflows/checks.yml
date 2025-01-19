@@ -15,10 +15,10 @@ jobs:
         poetry run pytest tests
     - name: Import order
       run: |
-        poetry run isort trading tests --check
+        poetry run isort src tests --check
     - name: Lint
       run: |
-        poetry run black trading tests --check
+        poetry run black src tests --check
     - name: Type checking
       run: |
-        poetry run mypy --install-types --non-interactive trading tests
+        poetry run mypy --install-types --non-interactive src tests

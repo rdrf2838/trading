@@ -14,7 +14,7 @@ poetry run which python
 sphinx-quickstart docs
 # Edit conf.py to add .. in search path and add autodocs
 # Edit index.rst to add modules
-sphinx-apidoc -o docs trading/
+sphinx-apidoc -o docs src/python/trading/
 cd docs
 make html
 ```
@@ -38,11 +38,16 @@ poetry install
 eval $(poetry env activate)
 ```
 
+## Installing as user
+```
+python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple trading
+```
+
 # TODO
-- remove conda entirely
-- build and upload to python package manager
-- packages and releases
 
 # DONE
 - dev dependencies
 - github actions shared...
+- remove conda entirely
+- build and upload to python package manager
+- packages and releases

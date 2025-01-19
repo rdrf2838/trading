@@ -15,6 +15,7 @@ jobs:
         poetry install --with docs
     - name: Sphinx build
       run: |
+        poetry run sphinx-apidoc -o docs src/python/trading/
         poetry run sphinx-build docs docs/_build
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4

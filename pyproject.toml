@@ -1,6 +1,6 @@
 [project]
 name = "trading"
-version = "0.0.0"
+dynamic = ["version"]
 description = ""
 authors = [
     {name = "Ivin Lee",email = "rdrf.myfoot@gmail.com"}
@@ -14,6 +14,12 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+version = "0.0.0"
+packages = [
+    {include = "trading", from = "src/python"}
+    ]
 
 [tool.poetry.group.test]
 optional = true
