@@ -36,3 +36,6 @@ black = "*"
 optional = true
 [tool.poetry.group.dev.dependencies]
 ipykernel = "*"
+
+[tool.black]
+line-length = 120
