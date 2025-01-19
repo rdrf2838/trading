@@ -1,11 +1,6 @@
 name: Python Package using Conda
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-
+on: [push]
 
 jobs:
   build-linux:
@@ -26,7 +21,7 @@ jobs:
     - name: Install poetry
       run: |
           curl -sSL https://install.python-poetry.org | python3 -
-          export GITHUB_PATH="$HOME/.local/bin:$GITHUB_PATH"
+          export PATH="$HOME/.local/bin:$PATH"GIGITHUB_THUB_
     - name: Install dependencies
       run: |
         conda env update --file environment.yml --name base
