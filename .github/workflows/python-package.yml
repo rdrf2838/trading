@@ -15,7 +15,9 @@ jobs:
         python-version: '3.12'
     - name: Install poetry
       run: |
-        python -m pip install poetry
+        python3 -m pip install --user pipx
+        python3 -m pipx ensurepath
+        pipx install poetry
     - name: Install dependencies
       run: |
         poetry install --with test
