@@ -18,4 +18,5 @@ jobs:
         poetry run black trading tests --check
     - name: Type checking
       run: |
+        yes | poetry run mypy --install-types || true
         poetry run mypy trading tests
