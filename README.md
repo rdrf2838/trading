@@ -33,8 +33,8 @@ poetry install
 ```
 
 # TODO
-- build and upload to python package manager
-- create documentation on github
 - dev dependencies
 - remove conda entirely
 - github actions shared...
+- build and upload to python package manager
+- packages and releases
