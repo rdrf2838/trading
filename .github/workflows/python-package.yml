@@ -13,6 +13,9 @@ jobs:
     - name: Test with pytest
       run: |
         poetry run pytest tests
+    - name: Import order
+      run: |
+        poetry run isort trading tests --check
     - name: Lint
       run: |
         poetry run black trading tests --check
