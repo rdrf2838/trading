@@ -30,11 +30,19 @@ git push -u -f origin master
 conda env create -f environment.yml
 conda activate trading3.12
 poetry install
+
+pyenv install --list
+pyenv install 3.12.8
+pyenv local 3.12
+poetry install
+eval $(poetry env activate)
 ```
 
 # TODO
-- dev dependencies
 - remove conda entirely
-- github actions shared...
 - build and upload to python package manager
 - packages and releases
+
+# DONE
+- dev dependencies
+- github actions shared...
