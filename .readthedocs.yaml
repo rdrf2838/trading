@@ -14,7 +14,7 @@ build:
     - python -m pip install poetry
     post_install:
     - VIRTUAL_ENV=$READTHEDOCS_VIRTUALENV_PATH poetry install --with docs
-    - python -m poetry run sphinx-apidoc -o docs src/python/trading/ -f
+    # - python -m poetry run sphinx-apidoc -o docs src/python/trading/ -f
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:
