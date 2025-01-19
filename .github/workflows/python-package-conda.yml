@@ -30,7 +30,13 @@ jobs:
     - name: Install dependencies 2
       run: |
         poetry install --with test
+    - name: Test with pytest 2
+      run: |
+        python -m pytest tests
     - name: Test with pytest
+      run: |
+        python -m poetry run python -m pytest tests
+    - name: Test with pytest 3
       run: |
         pytest tests
     - name: Lint with flake8
