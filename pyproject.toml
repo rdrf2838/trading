@@ -1,6 +1,6 @@
 [project]
 name = "trading"
-version = "v0.1.2"
+version = "0.0.0"
 description = ""
 authors = [
     {name = "Ivin Lee",email = "rdrf.myfoot@gmail.com"}

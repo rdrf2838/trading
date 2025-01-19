@@ -3,11 +3,6 @@ name: upload
 on:
     release:
       types: [published]
-    # workflow_run:
-    #     workflows: ['checks']
-    #     types: [completed]
-    #     branches:
-    #         - 'master'
 
 jobs:
   upload:
