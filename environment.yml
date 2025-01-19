@@ -2,3 +2,4 @@ name: trading3.12
 channels:
   - conda-forge
 dependencies:
+  - pip
