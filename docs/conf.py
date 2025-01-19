@@ -11,8 +11,8 @@ sys.path.insert(0, os.path.abspath('..'))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'trading'
-copyright = '2025, Ivin Lee'
-author = 'Ivin Lee'
+copyright = '2025, Ivin'
+author = 'Ivin'
 release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
@@ -21,7 +21,7 @@ release = '0.0.1'
 extensions = ['sphinx.ext.autodoc']
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
 

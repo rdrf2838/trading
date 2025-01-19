@@ -7,10 +7,16 @@ poetry run which python
 ```
 ## Sphinx
 ```
-sphinx-quickstart
-# Edit conf.py to add .. in search path
+sphinx-quickstart docs
+# Edit conf.py to add .. in search path and add autodocs
 # Edit index.rst to add modules
-sphinx-apidoc -o docs/source trading/
+sphinx-apidoc -o docs trading/
 cd docs
 make html
+```
+## GitHub
+```
+git init
+git remote add origin <url>
+git push -u -f origin master
 ```
