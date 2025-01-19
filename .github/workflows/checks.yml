@@ -1,9 +1,9 @@
-name: Python Package
+name: Code Checks
 
 on: [push]
 
 jobs:
-  build-linux:
+  checks:
     runs-on: ubuntu-latest
     steps:
     - uses: rdrf2838/actions-poetry@v1

@@ -1,0 +1,21 @@
+name: Upload
+
+on:
+    workflow_run:
+        workflows: ['checks']
+        types: [completed]
+        branches:
+            - 'master'
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: rdrf2838/actions-poetry@v1
+    - name: Upload to testpypi
+      env:
+        TESTPYPI_TOKEN: ${{ secrets.TESTPYPI_TOKEN }}
+      run:
+        poetry config pypi-token.test-pypi "$TESTPYPI_TOKEN"
+        poetry config repositories.test-pypi https://test.pypi.org/legacy/
+        poetry publish -r test-pypi
