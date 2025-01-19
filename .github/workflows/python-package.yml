@@ -15,7 +15,7 @@ jobs:
         poetry run pytest tests
     - name: Lint
       run: |
-        black trading tests --check
+        poetry run black trading tests --check
     - name: Type checking
       run: |
-        mypy trading tests
+        poetry run mypy trading tests
